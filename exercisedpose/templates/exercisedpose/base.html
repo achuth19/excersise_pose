@@ -1,0 +1,12 @@
+{% extends "exercisedpose/layout.html" %}
+{% block head %}
+<title>image and video analysis</title>
+{% endblock %}
+{% block body %}
+<h1>Upload an Image</h1>
+<form method="POST" enctype="multipart/form-data" action="{% url 'process_img' %}">
+    {% csrf_token %}
+    <input type="file" name="image">
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "exercisedpose/layout.html" %}
+{% block head %}
+<title>Generated Images</title>
+{% endblock %}
+{% block body %}
+<h1>Generated Images</h1>
+
+<h2>Output Image</h2>
+<img src="data:image/jpeg;base64,{{ output_image_base64 }}" alt="Output Image">
+
+<h2>Out Image</h2>
+<img src="data:image/jpeg;base64,{{ out_image_base64 }}" alt="Out Image">
+
+<h2>Final Image</h2>
+<p>{{ final_value }}</p>
+{% endblock %}
